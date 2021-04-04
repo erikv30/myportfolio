@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  color: #272727;
+  margin-top: 2.5rem;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h1,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.section-title {
+  position: relative;
+  font-size: 1.4rem;
+  color: #2ebc4f;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 2rem;
+  background-color: #2ebc4f;
+}
+
+.section {
+  padding: 3rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 2rem;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 3rem;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #3d4a3d;
+    transition: 0.5s;
+  }
+}
+
+.nav-item {
+  margin-bottom: 2rem;
+}
+
+.nav-item .fas {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  position: relative;
+}
+
+.nav-link:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: #2ebc4f;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  color: #759a76;
+}
+.nav-toggle {
+  color: #759a76;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: #2ebc4f;
+}
+
+.display {
+  right: 0;
+}
+
+/* HOME SECTION */
+.main {
+  padding: 0 2rem;
+}
+
+.home {
+  height: calc(100vh - 2.5rem);
+  row-gap: 1rem;
+}
+
+.home-data {
+  align-self: center;
+}
+
+.home-title {
+  font-size: 2rem;
+}
+/*  #2EBC4F
+    #E9E9DD
+    #759A76
+    #3D4A3D
+    #00982e*/
