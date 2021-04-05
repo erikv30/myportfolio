@@ -57,8 +57,25 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
+nav {
+  margin-top: 5.7rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #3d4a3d;
+  padding: 4rem 2rem;
+  width: 400px;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+}
+
 .nav-logo {
   color: #759a76;
+}
+
+.close-btn {
+  padding-right: 3rem;
 }
 
 .open-btn,
@@ -76,10 +93,13 @@ header {
     right: 0;
     background-color: #3d4a3d;
     padding: 4rem 2rem;
-    width: 80%;
+    width: 70%;
     height: 100vh;
     z-index: 100;
     display: none;
+  }
+  .close-btn {
+    padding-right: 0;
   }
 }
 
@@ -123,10 +143,6 @@ header {
   display: block;
 }
 
-.main {
-  margin-top: 5.7rem;
-}
-
 .section-title {
   position: relative;
   font-size: 2rem;
@@ -139,7 +155,7 @@ header {
 .section-title::after {
   position: absolute;
   content: "";
-  width: 70px;
+  width: 80px;
   height: 0.5rem;
   left: 0;
   right: 0;
@@ -154,8 +170,8 @@ header {
 
 .home {
   height: calc(100vh - 3rem);
-  row-gap: 2rem;
   padding: 2rem;
+  margin-top: 5.7rem;
 }
 
 .home-data {
@@ -236,6 +252,7 @@ header {
   color: #3d4a3d;
   font-size: 2rem;
   font-weight: 600;
+  width: 205px;
   padding: 1.5rem 2rem;
   margin-bottom: 4rem;
   border-radius: 0.5rem;
@@ -246,8 +263,230 @@ header {
   margin-right: 1.5rem;
   color: #759a76;
 }
-/*  #2EBC4F
-    #E9E9DD
-    #759A76
-    #3D4A3D
-    #00982e*/
+
+.skill-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #2ebc4f;
+  height: 0.3rem;
+  border-radius: 0.5rem;
+  z-index: -10;
+  width: 100%;
+}
+
+.project-img {
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.project-img img {
+  transition: 1s;
+  cursor: pointer;
+}
+
+.project-img img:hover {
+  transform: scale(1.1);
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: #3d4a3d;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  color: #759a76;
+}
+
+.contact-item a {
+  color: #759a76;
+}
+
+.contact-item a:hover {
+  color: #00982e;
+}
+
+.contact-item i {
+  color: #2ebc4f;
+  margin: 1.5rem;
+}
+
+.footer {
+  background-color: #3d4a3d;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials {
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.footer-icon:hover {
+  color: #2ebc4f;
+}
+
+.footer-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 400px) {
+  .home-img {
+    width: 100%;
+    max-width: 270px;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .home-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .skill {
+    margin: 5rem 1rem;
+  }
+
+  .projects .section-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-column {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    padding: 2rem 5rem;
+  }
+
+  .home-title {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .home-social-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .section-title::after {
+    width: 140px;
+    top: 4.5rem;
+  }
+
+  .section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+  }
+
+  .skills .section-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-column {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skill {
+    margin: 5rem 0.8rem;
+  }
+
+  .projects .section-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-column {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-img {
+    margin: 2.5rem 1.5rem;
+  }
+
+  .project-img img {
+    width: 300px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-item {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-img {
+    width: 100%;
+    max-width: 450px;
+    right: 8%;
+  }
+
+  .section {
+    padding-left: 6em;
+    padding-right: 6rem;
+  }
+
+  .about-text {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .skill {
+    margin: 5rem 3rem;
+  }
+
+  .project-img {
+    margin: 2.5rem;
+  }
+
+  .project-img img {
+    width: 400px;
+  }
+}
