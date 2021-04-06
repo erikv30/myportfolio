@@ -22,3 +22,30 @@ function linkAction() {
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*scroll reveal*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+})
+
+/* SR home */
+sr.reveal('.home-title', {})
+sr.reveal('.home-img', {delay:200})
+sr.reveal('.home-social-icon', {interval:200})
+
+/* SR about */
+sr.reveal('.about-text', {})
+sr.reveal('.about-img', {delay:300})
+
+/* SR skills */
+sr.reveal('.skill', {interval:200})
+
+/* SR projects */
+sr.reveal('.project-img', {interval:200})
+
+/* SR contact */
+sr.reveal('.contact-item', {interval:200})
+
