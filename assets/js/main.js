@@ -32,20 +32,14 @@ const sr = ScrollReveal({
 })
 
 /* SR home */
-sr.reveal('.home-title', {})
-sr.reveal('.home-img', {delay:200})
 sr.reveal('.home-social-icon', {interval:200})
 
 /* SR about */
-sr.reveal('.about-text', {})
-sr.reveal('.about-img', {delay:300})
+sr.reveal('.about-img', {delay:200})
 
 /* SR skills */
 sr.reveal('.skill', {interval:200})
 
 /* SR projects */
 sr.reveal('.project-img', {interval:200})
-
-/* SR contact */
-sr.reveal('.contact-item', {interval:200})
 
