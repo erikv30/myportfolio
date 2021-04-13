@@ -106,20 +106,14 @@ nav {
     position: absolute;
     right: 0;
     top: 4.3rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #222;
     height: calc(100vh - 4.3rem);
     width: 250px;
     align-items: center;
     font-size: 3rem;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
     z-index: 100;
-  }
-
-  .nav-links li {
-    opacity: 0;
   }
 
   .nav-links a i {
@@ -130,20 +124,9 @@ nav {
   .menu-btn {
     display: block;
   }
-}
 
-.nav-active {
-  transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
+  .nav-active {
+    display: flex;
   }
 }
 

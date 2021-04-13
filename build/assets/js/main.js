@@ -1,20 +1,14 @@
-/* Navbar */
-const navActive = () => {
-    const menu = document.querySelector('.menu-btn')
-    const nav = document.querySelector('.nav-links')
-    const navLinks = document.querySelectorAll('.nav-links li')
-    /* Toggle nav */
-    menu.addEventListener('click', () => {
-        nav.classList.toggle('nav-active')
+/* Navbar start */
+const nav = document.querySelector('.nav-links')
+const navLinks = document.querySelectorAll('.nav-links li')
 
-        /* Animated links */
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = ''
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
-            }
-        })
-    })
+document.getElementById('menu-btn').addEventListener('click', function() {
+    nav.classList.toggle('nav-active')
+})
+
+function onLinkClick() {
+   nav.classList.toggle('nav-active')
 }
-navActive()
+
+navLinks.forEach(n => n.addEventListener('click', onLinkClick))
+/* Navbar ends */
