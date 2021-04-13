@@ -16,7 +16,5 @@ const navActive = () => {
             }
         })
     })
-    
 }
-
 navActive()
