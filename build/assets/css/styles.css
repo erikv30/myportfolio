@@ -238,6 +238,7 @@ nav {
 
 .about-img img {
   border-radius: 50%;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
 
 .grid-container {
@@ -259,29 +260,95 @@ nav {
   object-fit: cover;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.project {
+  position: relative;
+  max-width: 400px;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
 .contact-title {
   font-size: 2rem;
   color: #3d4a3d;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .contact-item {
-  font-size: 1.4rem;
-  margin-bottom: 4rem;
-  color: #759a76;
+  margin-bottom: 5rem;
 }
 
-.contact-item a {
-  color: #759a76;
-}
-
-.contact-item a:hover {
-  color: #00982e;
-}
-
-.contact-item i {
+.accordion {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 270px;
   color: #2ebc4f;
-  margin: 1.5rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #759a76;
+  color: #ffffff;
+}
+
+.accordion i {
+  margin: 1rem;
+}
+
+.panel {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  background-color: #f2f2f2;
+  color: #2ebc4f;
+  display: none;
+  overflow: hidden;
+}
+
+.panel a {
+  color: #2ebc4f;
 }
 
 .footer {
@@ -321,10 +388,23 @@ nav {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
 }
 
 @media (max-width: 410px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+  .section {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .home .home-content {
+    padding-left: 0;
   }
 }
